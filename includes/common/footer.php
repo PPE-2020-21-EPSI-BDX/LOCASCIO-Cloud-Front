@@ -3,6 +3,6 @@
 <footer>
 </footer>
 <?php } ?>
-<script type="text/javascript" src="<?= DOMAIN ?>/assets/js/script.js"></script>
+<script type="text/javascript" src="<?= DOMAIN ?>/assets/js/default/script.js"></script>
 </body>
 </html>

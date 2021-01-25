@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'titre-regular';
+    src: url('../fonts/Architects Daughter/architectsdaughter-regular-webfont.woff2') format('woff2'),
+    url('../fonts/Architects Daughter/architectsdaughter-regular-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'texte-bold';
+    src: url('../fonts/Open Sans Condensed/opensanscondensed-bold-webfont.woff2') format('woff2'),
+    url('../fonts/Open Sans Condensed/opensanscondensed-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'texte-light';
+    src: url('../fonts/Open Sans Condensed/opensanscondensed-light-webfont.woff2') format('woff2'),
+    url('../fonts/Open Sans Condensed/opensanscondensed-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'texte-italic';
+    src: url('../fonts/Open Sans Condensed/opensanscondensed-lightitalic-webfont.woff2') format('woff2'),
+    url('../fonts/Open Sans Condensed/opensanscondensed-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-black';
+    src: url('../fonts/Lato/lato-black-webfont.woff2') format('woff2'),
+    url('../fonts/Lato/lato-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-blackitalic';
+    src: url('../fonts/Lato/lato-blackitalic-webfont.woff2') format('woff2'),
+    url('../fonts/Lato/lato-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-bold';
+    src: url('../fonts/Lato/lato-bold-webfont.woff2') format('woff2'),
+    url('../fonts/Lato/lato-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-bolditalic';
+    src: url('../fonts/Lato/lato-bolditalic-webfont.woff2') format('woff2'),
+    url('../fonts/Lato/lato-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lato-italic';
+    src: url('../fonts/Lato/lato-italic-webfont.woff2') format('woff2'),
+    url('../fonts/Lato/lato-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-light';
+    src: url('../fonts/Lato/lato-light-webfont.woff2') format('woff2'),
+    url('../fonts/Lato/lato-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-lightitalic';
+    src: url('../fonts/Lato/lato-lightitalic-webfont.woff2') format('woff2'),
+    url('../fonts/Lato/lato-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-regular';
+    src: url('../fonts/Lato/lato-regular-webfont.woff2') format('woff2'),
+    url('../fonts/Lato/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-thin';
+    src: url('../fonts/Lato/lato-thin-webfont.woff2') format('woff2'),
+    url('../fonts/Lato/lato-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-thinitalic';
+    src: url('../fonts/Lato/lato-thinitalic-webfont.woff2') format('woff2'),
+    url('../fonts/Lato/lato-thinitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

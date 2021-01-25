@@ -10,7 +10,7 @@ define('__REALPATH__', __DIR__);
  */
 
 //$domain = '/Cours/EPSI%20B1/PHP/02'; // Pour le prof
-$domain = '/PHP/V3'; // Pour le prof
+$domain = ''; // Pour le prof
 define('DOMAIN', $domain);
 $uri = str_replace($domain, '', $_SERVER['REQUEST_URI']);
 $segments = explode('/', $uri);
@@ -41,6 +41,12 @@ require_once __REALPATH__ . '/includes/tools/functions.php';
 isAdmin();
 logout();
 $page = get_page($uri, $segments);
-require __REALPATH__ . '/includes/common/head.php';
-echo $page;
-require __REALPATH__ . '/includes/common/footer.php';
+if(!ADMIN) {
+    require __REALPATH__ . '/includes/common/head.php';
+    echo $page;
+    require __REALPATH__ . '/includes/common/footer.php';
+} else {
+    require __REALPATH__ . '/includes/common/head_admin.php';
+    echo $page;
+    require __REALPATH__ . '/includes/common/footer_admin.php';
+}

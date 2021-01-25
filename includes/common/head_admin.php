@@ -15,7 +15,7 @@
     <title>Erreur 404</title>
     <?php } ?>
     <link rel="icon" href="<?= DOMAIN ?>/assets/media/images/logo_Locascio_Cloud.png">
-    <link rel="stylesheet" href="<?= DOMAIN ?>/assets/css/default/style.css">
+    <link rel="stylesheet" href="<?= DOMAIN ?>/assets/css/style_.css">
 </head>
 <body>
 <?php if (!defined('MAINTENANCE') && !defined('ERROR_404') && !defined('ADMIN')) { ?>

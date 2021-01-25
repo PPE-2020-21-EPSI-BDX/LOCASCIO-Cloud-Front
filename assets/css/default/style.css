@@ -1,5 +1,5 @@
-@import url(fonts.css);
-@import url(reboot.css);
+@import url(../fonts.css);
+@import url(../reboot.css);
 @import url(responsive.css);
 
 body {
@@ -169,7 +169,7 @@ nav ul li {
 }
 
 #firstpage {
-    background-image: url("../media/images/background-home.jpg");
+    background-image: url("../../media/images/background-home.jpg");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -546,7 +546,7 @@ article a {
     width: 40px;
     height: 40px;
 
-    background-image: url('../media/images/arrow.svg');
+    background-image: url('../../media/images/arrow.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

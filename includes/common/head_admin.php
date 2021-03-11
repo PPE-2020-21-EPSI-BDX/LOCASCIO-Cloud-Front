@@ -15,41 +15,43 @@
     <title>Erreur 404</title>
     <?php } ?>
     <link rel="icon" href="<?= DOMAIN ?>/assets/media/images/logo_Locascio_Cloud.png">
-    <link rel="stylesheet" href="<?= DOMAIN ?>/assets/css/style_.css">
+    <link rel="stylesheet" href="<?= DOMAIN ?>/assets/css/admin/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
 </head>
 <body>
-<?php if (!defined('MAINTENANCE') && !defined('ERROR_404') && !defined('ADMIN')) { ?>
+<?php if (!defined('MAINTENANCE') && !defined('ERROR_404')) { ?>
 <header>
-    <div id="burger-container">
-        <img id="logo" src="<?= DOMAIN ?>/assets/media/images/logo_Locascio_Cloud.png" alt="logo">
-        <div id="burger">
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-        </div>
-    </div>
     <nav>
-        <div class="logo-nav">
-            <a href="<?= DOMAIN ?>/"><img src="<?= DOMAIN ?>/assets/media/images/logo_Locascio_Cloud.png" alt="logo"></a>
-        </div>
+        <div class="logo-nav"></div>
         <ul>
             <li class="<?= ($uri == '/') ? 'active' : '' ?>">
                 <a class="txt-nav" href="<?= DOMAIN ?>/">Accueil</a>
-            </li>
-            <li class="<?= ($uri == '/a-propos') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/a-propos">&Agrave; propos</a>
-            </li>
-            <li class="<?= ($segments[1] == 'blog') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/blog">Blog</a>
-            </li>
-            <li class="<?= ($uri == '/contact') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/contact">Contact</a>
-            </li>
-            <li class="<?= ($uri == '/connexion') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/connexion">Se Connecter</a>
             </li>
         </ul>
     </nav>
 </header>
 <?php } ?>
 <main>
+    <div class="sidebar">
+        <div class="sidebar__item_big">
+            <div class="sidebar__item_big_symbol" style="mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');-webkit-mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');"></div>
+            <div class="sidebar__item_big_name">Maxime BAUDOIN</div>
+        </div>
+        <div class="sidebar__separator"></div>
+        <div class="sidebar__item active">
+            <div class="sidebar__item_symbol" style="mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');-webkit-mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');"></div>
+            <div class="sidebar__item_name">DASHBOARD</div>
+        </div>
+        <div class="sidebar__item">
+            <div class="sidebar__item_symbol" style="mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');-webkit-mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');"></div>
+            <div class="sidebar__item_name">CONFIGURATION</div>
+        </div>
+        <div class="sidebar__item">
+            <div class="sidebar__item_symbol" style="mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');-webkit-mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');"></div>
+            <div class="sidebar__item_name">MON COMPTE</div>
+        </div>
+        <div class="sidebar__item">
+            <div class="sidebar__item_symbol" style="mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');-webkit-mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');"></div>
+            <div class="sidebar__item_name">DASHBOARD</div>
+        </div>
+    </div>

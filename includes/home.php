@@ -106,10 +106,7 @@
 
                 </div>
                 <div class="container-btns">
-                    <div class="btns-offers">
-                        <p>Sélectionner</p>
-
-                    </div>
+                    <a class="btns-offers" href="#">Sélectionner</a>
                 </div>
 
             </div>
@@ -134,10 +131,7 @@
 
                 </div>
                 <div class="container-btns">
-                    <div class="btns-offers">
-                        <p>Sélectionner</p>
-
-                    </div>
+                    <a class="btns-offers" href="#">Sélectionner</a>
                 </div>
 
             </div>
@@ -162,10 +156,7 @@
 
                 </div>
                 <div class="container-btns">
-                    <div class="btns-offers">
-                        <p>Sélectionner</p>
-
-                    </div>
+                    <a class="btns-offers" href="#">Sélectionner</a>
                 </div>
 
             </div>
@@ -190,10 +181,7 @@
 
                 </div>
                 <div class="container-btns">
-                    <div class="btns-offers">
-                        <p>Sélectionner</p>
-
-                    </div>
+                    <a class="btns-offers" href="#">Sélectionner</a>
                 </div>
 
             </div>
@@ -218,10 +206,7 @@
 
                 </div>
                 <div class="container-btns">
-                    <div class="btns-offers">
-                        <p>Sélectionner</p>
-
-                    </div>
+                    <a class="btns-offers" href="#">Sélectionner</a>
                 </div>
 
             </div>

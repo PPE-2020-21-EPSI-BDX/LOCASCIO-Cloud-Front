@@ -354,10 +354,7 @@ nav ul li {
     transform: rotate(-45deg);
 }
 
-footer {
-    padding: 20px;
-    background-color: #000;
-}
+
 
 
 #newsletter {
@@ -869,7 +866,108 @@ input:checked + .slider:before {
 }
 
 .footer{
-    height: 15vh;
+    min-height:40vh;
     width: 100vw;
+    background-color: #0a0024;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    background-color: #EFF1FF;
+    color: black;
+    font-family: 'lato-regular', Tahoma, Geneva, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.socials{
+    height: 18vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EFF1FF;
+    color: black;
+    font-family: 'lato-regular', Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+}
+
+
+.bottom{
+    height: 15vh;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 50%;
+    font-size: 12px;
+}
+
+.bottom p {
+    font-size: 10px;
+    color: #868686;
+}
+
+
+.container-icons{
+    height: 80px;
+    width: 80px;
+    background-color: #0a0024;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+}
+.container-icons:hover{
+    transform: scale(1.1);
+}
+.container-icons:active{
+    transform: scale(0.9);
+}
+
+.form-socials{
+    height: 70%;
+    width: 70%;
+    border-radius: 10px;
     background-color: #FFFFFF;
+
+}
+
+.facebook{
+    background-image: url('../../media/images/facebook.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.discord{
+    background-image: url('../../media/images/discord.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.twitter{
+    background-image: url('../../media/images/twitter.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.linkedin{
+    background-image: url('../../media/images/linkedin.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

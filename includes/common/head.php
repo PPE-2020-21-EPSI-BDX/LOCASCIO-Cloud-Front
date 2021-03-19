@@ -28,7 +28,7 @@
             <span class="burger-line"></span>
         </div>
     </div>
-    <nav>
+    <nav class="stroke">
         <div class="logo-nav">
             <a href="<?= DOMAIN ?>/"><img src="<?= DOMAIN ?>/assets/media/images/logo_Locascio_Cloud.png" alt="logo"></a>
         </div>

@@ -90,7 +90,7 @@ if (!function_exists('get_page')) {
                 case '/admin':
                     define('ADMIN', true);
                     ob_start();
-                    include __REALPATH__ . '/includes/admin/admin.php';
+                    include __REALPATH__ . '/includes/admin/home.php';
                     $content = ob_get_clean();
                     break;
 
@@ -105,34 +105,10 @@ if (!function_exists('get_page')) {
 
         } else {
 
-            $content = blog_dispatcher($segments);
         }
 
         return $content;
-    }
-}
 
-if (!function_exists('blog_dispatcher')) {
-    
-    function blog_dispatcher($segments)
-    {
-        $name = $segments[2];
-        $article = getOneArticle($name);
-        if (!empty($article)) {
-
-            ob_start();
-            include __REALPATH__ . '/includes/common/article.php';
-            return ob_get_clean();
-
-        } else {
-
-            define('ERROR_404', true);
-            ob_start();
-            include __REALPATH__ . '/includes/404.php';
-            $content = ob_get_clean();
-            http_response_code(404);
-            return $content;
-        }
     }
 }
 
@@ -158,69 +134,6 @@ if (!function_exists('maintenance')) {
             require __REALPATH__ . '/includes/maintenance.php';
             require __REALPATH__ . '/includes/common/footer.php';
             exit();
-        }
-    }
-}
-
-if (!function_exists('getArticles')) {
-
-    function getArticles()
-    {
-        $db = connexion();
-        $query = "SELECT * FROM articles WHERE published = 1";
-        $stt = $db->prepare($query);
-        $stt->execute();
-        $articles = $stt->fetchAll(\PDO::FETCH_ASSOC);
-        return $articles;
-    }
-}
-
-if (!function_exists('getOneArticle')) {
-
-    function getOneArticle($uri)
-    {
-        $db = connexion();
-        $query = "SELECT * FROM articles WHERE uri = '" . $uri . "' AND published = 1";
-        $stt = $db->prepare($query);
-        $stt->execute();
-        $article = $stt->fetch(\PDO::FETCH_ASSOC);
-        return $article;
-    }
-}
-
-if (!function_exists('formatDate')) {
-
-    function formatDate($date)
-    {
-        $d = date("d-m-Y", strtotime($date));
-        $t = date("H\hi", strtotime($date));
-        return $d . ' à ' . $t;
-    }
-}
-
-if (!function_exists('isAdmin')) {
-
-    function isAdmin()
-    {
-        if (!isset($_SESSION['id']) && isset($_POST['connexion']) && $_POST['connexion'] == 'ok') {
-
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-
-            $db = connexion();
-            $query = "SELECT id, firstname, lastname, email FROM users WHERE email = '" . $email . "' AND password = '" . md5($password) . "'";
-            $stt = $db->prepare($query);
-            $stt->execute();
-
-            if ($stt->rowCount() > 0) {
-
-                $user = $stt->fetch(\PDO::FETCH_ASSOC);
-                foreach ($user as $key => $value) {
-
-                    $_SESSION[$key] = $value;
-                    header('Location: ' . DOMAIN . '/admin');
-                }
-            }
         }
     }
 }

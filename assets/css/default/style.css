@@ -595,14 +595,14 @@ article a {
     margin:  0px 25px 0px 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .txt-offers-right{
     margin:  0px 25px 0px 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .title-offers{
     font-size: 22px;
@@ -613,6 +613,7 @@ article a {
     color: #2900FF;
     font-size: 28px;
     font-weight: bold;
+    line-height: 32px;
 }
 .components{
     line-height: 30px;
@@ -623,6 +624,17 @@ article a {
 .properties{
     line-height: 30px;
     font-size: 13px;
+}
+
+.check{
+    height: 20px;
+    width: auto;
+    margin-bottom: 5px;
+}
+.cross{
+    height: 15px;
+    width: auto;
+    margin-bottom: 5px;
 }
 
 .btns-offers{

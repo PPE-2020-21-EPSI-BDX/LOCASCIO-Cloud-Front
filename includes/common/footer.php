@@ -2,28 +2,28 @@
 <?php if (!defined('MAINTENANCE') && !defined('ERROR_404') && !defined('ADMIN')) { ?>
 <footer>
     <section class="footer">
-        <div class="top xLarge-12 large-12 medium-12 small-12 xSmall-12">
+<!--        <div class="top xLarge-12 large-12 medium-12 small-12 xSmall-12">
             <p>Retrouvez nous sur les réseaux sociaux</p>
         </div>
-        <div class="socials xLarge-3 large-3 medium-6 small-12 xSmall-12 purple">
+        <div class="socials xLarge-3 large-3 medium-6 small-6 xSmall-6 purple">
             <a href="#" class="container-icons">
                 <div class="form-socials facebook"></div>
             </a>
             <p>Facebook</p>
         </div>
-        <div class="socials xLarge-3 large-3 medium-6 small-12 xSmall-12 blue">
+        <div class="socials xLarge-3 large-3 medium-6 small-6 xSmall-6 blue">
             <a href="#" class="container-icons">
                 <div class="form-socials discord"></div>
             </a>
             <p>Discord</p>
         </div>
-        <div class="socials xLarge-3 large-3 medium-6 small-12 xSmall-12 purple">
+        <div class="socials xLarge-3 large-3 medium-6 small-6 xSmall-6 purple">
             <a href="#" class="container-icons">
                 <div class="form-socials twitter"></div>
             </a>
             <p>Twitter</p>
         </div>
-        <div class="socials xLarge-3 large-3 medium-6 small-12 xSmall-12 blue">
+        <div class="socials xLarge-3 large-3 medium-6 small-6 xSmall-6 blue">
             <a href="#" class="container-icons">
                 <div class="form-socials linkedin"></div>
             </a>
@@ -41,6 +41,30 @@
             </div>
             <p>Tout droit réservés 2021</p>
 
+        </div>
+-->
+        <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 top-container">
+            <div class="xSmall-10 small-10 medium-10 large-10 xLarge-10 line"></div>
+        </div>
+        <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 bottom-container">
+            <div class="xSmall-10 small-10 medium-10 large-6 xLarge-6 bottom-left">
+                <a href="<?= DOMAIN ?>/">
+                    <img src="<?= DOMAIN ?>/assets/media/images/logo_Locascio_Cloud.png" alt="logo">
+                </a>
+                <a href="#">CGU</a>
+                <a href="#">RGPD</a>
+                <a href="#">Mentions légales</a>
+            </div>
+            <div class="xSmall-10 small-10 medium-10 large-4 xLarge-4 bottom-right">
+                <div class="socials-footer">
+                    <a class="circle-icon facebook" href="#"></a>
+                    <a class="circle-icon discord" href="#"></a>
+                    <a class="circle-icon twitter" href="#"></a>
+                </div>
+                <div class="copyright-footer">
+                    <p>Copyright © 2021 PPE EPSI</p>
+                </div>
+            </div>
         </div>
 
     </section>

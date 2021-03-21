@@ -86,11 +86,6 @@ if (!function_exists('get_page')) {
                     $content = ob_get_clean();
                     break;
 
-                case '/phpMyAdmin':
-                    ob_start();
-                    include __REALPATH__ . '/assets/phpMyAdmin/index.php';
-                    $content = ob_get_clean();
-                    break;
                 case '/admin':
                     define('ADMIN', true);
                     ob_start();

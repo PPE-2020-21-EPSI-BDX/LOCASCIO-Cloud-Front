@@ -1,0 +1,14 @@
+{
+  "name": "ppe-2020-2021/locascio-cloud",
+  "description": "This is the PPE Web Project of Clément, Maxime, Hugo et Antoine at EPSI BORDEAUX in 2020-2021",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "clément lo-cascio, maxime baudoin, hugo scarbonchi, antoine cuchet",
+      "email": "contact@locascio.fr"
+    }
+  ],
+  "require": {
+  }
+}

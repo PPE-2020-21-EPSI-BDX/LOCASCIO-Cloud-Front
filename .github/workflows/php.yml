@@ -40,4 +40,4 @@ jobs:
     - name: Validate composer.json and composer.lock to PhpMyAdmin Directory
       run: /usr/local/bin/composer validate --strict
     - name: Install dependencies to PhpMyAdmin Directory
-      run: /usr/local/bin/composer install --prefer-dist --no-progress --no-suggest
+      run: /usr/local/bin/composer validate

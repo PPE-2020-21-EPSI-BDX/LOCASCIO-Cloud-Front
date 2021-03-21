@@ -34,3 +34,10 @@ jobs:
 
     # - name: Run test suite
     #   run: composer run-script test
+    #PhpMyAdmin STEPS
+    - name: Go to PhpMyadmin directory
+      run: cd assets/phpMyAdmin
+    - name: Validate composer.json and composer.lock to PhpMyAdmin Directory
+      run: /usr/local/bin/composer validate --strict
+    -name: Install dependencies to PhpMyAdmin Directory
+      run: /usr/local/bin/composer install --prefer-dist --no-progress --no-suggest

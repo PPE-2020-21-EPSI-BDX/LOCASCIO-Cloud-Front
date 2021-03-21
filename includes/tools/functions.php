@@ -62,7 +62,7 @@ if (!function_exists('get_page')) {
                     $content = ob_get_clean();
                     break;
 
-                    case '/connexion':
+                case '/connexion':
                     ob_start();
                     include __REALPATH__ . '/includes/connexion.php';
                     $content = ob_get_clean();
@@ -86,12 +86,6 @@ if (!function_exists('get_page')) {
                     $content = ob_get_clean();
                     break;
 
-                case '/login':
-                    define('ADMIN', true);
-                    ob_start();
-                    include __REALPATH__ . '/includes/admin/login.php';
-                    $content = ob_get_clean();
-                    break;
 
                 case '/admin':
                     define('ADMIN', true);

@@ -80,7 +80,6 @@ if (!function_exists('get_page')) {
                     $content = ob_get_clean();
                     break;
 
-
                 case '/admin':
                     define('ADMIN', true);
                     ob_start();

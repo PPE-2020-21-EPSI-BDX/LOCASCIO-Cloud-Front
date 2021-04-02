@@ -50,12 +50,6 @@ if (!function_exists('get_page')) {
                     $content = ob_get_clean();
                     break;
 
-                case '/blog':
-                    ob_start();
-                    include __REALPATH__ . '/includes/blog.php';
-                    $content = ob_get_clean();
-                    break;
-
                 case '/contact':
                     ob_start();
                     include __REALPATH__ . '/includes/contact.php';

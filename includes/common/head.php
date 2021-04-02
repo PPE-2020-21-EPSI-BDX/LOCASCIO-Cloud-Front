@@ -39,9 +39,6 @@
             <li class="<?= ($uri == '/a-propos') ? 'active' : '' ?>">
                 <a class="txt-nav" href="<?= DOMAIN ?>/a-propos">&Agrave; propos</a>
             </li>
-            <li class="<?= ($segments[1] == 'blog') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/blog">Blog</a>
-            </li>
             <li class="<?= ($uri == '/contact') ? 'active' : '' ?>">
                 <a class="txt-nav" href="<?= DOMAIN ?>/contact">Contact</a>
             </li>

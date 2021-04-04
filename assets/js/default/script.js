@@ -15,13 +15,13 @@ if (burger) {
 }
 
 window.onscroll = function() {
-    if (document.documentElement.scrollTop > 100) {
-        document.querySelector("header").style.height = "2vh"
-        document.querySelector(".logo-nav img").style.width = "100px"
+    if (document.documentElement.scrollTop > 10) {
+        document.querySelector("header").style.height = "7vh"
+        document.querySelector(".logo-nav img").style.width = "150px"
         document.querySelector("#logo").style.width = "100px";
         document.querySelector("header").classList.add('header-bg');
     } else {
-        document.querySelector("header").style.height = "4.5vh"
+        document.querySelector("header").style.height = "10vh"
         document.querySelector(".logo-nav img").style.width = "200px"
         document.querySelector("#logo").style.width = "200px";
         document.querySelector("header").classList.remove('header-bg');
@@ -58,3 +58,49 @@ function moveCaroussel(direction) {
     }
 }
 
+
+const readMoreButtons = document.querySelectorAll(".read-more-button");
+
+readMoreButtons.forEach((current, index, array) => {
+    const tl = gsap.timeline({ paused: true });
+
+    const button = current;
+    const text = button.querySelector(".text");
+    const arrow = button.querySelector(".arrow-btns");
+
+    gsap.set(button, {
+        width: '70px'
+    });
+    gsap.set(text, {
+        opacity: 0,
+        scaleY: .2,
+        transformOrigin: '0% 100%'
+    });
+    gsap.set(arrow, {
+        right: '50%'
+    });
+
+    tl.to(button, {
+        width: '250px',
+        duration: 1,
+        ease: Elastic.easeOut.config(1, 0.3)
+    });
+    tl.to(arrow, {
+        x: '5em',
+        duration: .5,
+        ease: Power4.easeIn
+    }, 0);
+    tl.to(text, {
+        opacity: 1,
+        scaleY: 1,
+        duration: .3,
+        ease: Back.easeOut.config(4)
+    }, .5);
+
+    button.addEventListener("mouseenter", () => {
+        tl.play();
+    });
+    button.addEventListener("mouseleave", () => {
+        tl.reverse();
+    });
+});

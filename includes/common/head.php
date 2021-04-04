@@ -40,7 +40,7 @@
                 <a class="txt-nav" href="<?= DOMAIN ?>/a-propos">&Agrave; propos</a>
             </li>
             <li class="<?= ($uri == '/contact') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/contact">Contact</a>
+                <a class="txt-nav" href="<?= DOMAIN ?>/contact">Nos offres</a>
             </li>
             <li class="<?= ($uri == '/connexion') ? 'active' : '' ?>">
                 <a class="txt-nav" href="<?= DOMAIN ?>/connexion">Se Connecter</a>

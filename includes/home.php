@@ -58,7 +58,7 @@
     <div class="xLarge-5 large-5 medium-6 small-12 xSmall-12 center-end">
         <div id="container-thirdpage" class="column margin-around">
             <div id="btns-offres">
-                <p>Nos offres</p>
+                <a href="<?= DOMAIN ?>/contact">Nos offres</a>
             </div>
             <h1>Des offres différentes et adaptées à vos besoins</h1>
             <h3>Petite description sur le concept.
@@ -90,8 +90,9 @@
                     <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
                 </div>
                 <div class="container-btns">
-                    <a href='#' class="btns-offers">
-                        <p>Sélectionner</p>
+                    <a href="#" class="read-more-button">
+                        <span class="text">sélectionner</span>
+                        <span class="arrow-btns"></span>
                     </a>
                 </div>
             </div>
@@ -115,8 +116,9 @@
                     <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
                 </div>
                 <div class="container-btns">
-                    <a href='#' class="btns-offers">
-                        <p>Sélectionner</p>
+                   <a href="#" class="read-more-button">
+                        <span class="text">sélectionner</span>
+                        <span class="arrow-btns"></span>
                     </a>
                 </div>
             </div>
@@ -140,8 +142,9 @@
                     <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
                 </div>
                 <div class="container-btns">
-                    <a href='#' class="btns-offers">
-                        <p>Sélectionner</p>
+                   <a href="#" class="read-more-button">
+                        <span class="text">sélectionner</span>
+                        <span class="arrow-btns"></span>
                     </a>
                 </div>
             </div>
@@ -165,8 +168,9 @@
                     <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
                 </div>
                 <div class="container-btns">
-                    <a href='#' class="btns-offers">
-                        <p>Sélectionner</p>
+                   <a href="#" class="read-more-button">
+                        <span class="text">sélectionner</span>
+                        <span class="arrow-btns"></span>
                     </a>
                 </div>
             </div>     
@@ -190,8 +194,9 @@
                     <img class='cross' src="<?= DOMAIN ?>/assets/media/images/close.svg">
                 </div>
                 <div class="container-btns">
-                    <a href='#' class="btns-offers">
-                        <p>Sélectionner</p>
+                   <a href="#" class="read-more-button">
+                        <span class="text">sélectionner</span>
+                        <span class="arrow-btns"></span>
                     </a>
                 </div>
             </div>
@@ -201,6 +206,7 @@
             <span id="caroussel-arrow-right" class="caroussel-arrow"></span>
         </div>
     </div>
+
 </section>
 
 

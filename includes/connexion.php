@@ -5,7 +5,7 @@
 
 
 <section id="login">
-    <div class="xLarge-6 large-6 medium-6 small-6 xSmall-6 container-log">
+    <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 container-log">
         <div class="card_log">
             <div class="welcome">
                 <h1>Bienvenue !</h1>
@@ -51,7 +51,7 @@
         </div>
 
     </div>
-    <div class="xLarge-6 large-6 medium-6 small-6 xSmall-6 container-regi">
+    <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 container-regi">
         <div class="card_regi">
             <div class="regi">
                 <h1>Je n'ai pas encore de compte</h1>
@@ -91,7 +91,12 @@
                         </svg>
                         <span>Créer un compte</span>
                     </button>
-
+                </div>
+                <div class="details-regi">
+                    <p>
+                        En cliquant sur Créer un compte, vous acceptez notre <a href="#" class="cgu">politique de
+                            confidentialité</a> applicable au traitement de vos données personnelles.
+                    </p>
                 </div>
             </form>
 

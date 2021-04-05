@@ -412,12 +412,6 @@ main {
 
 
 
-#newsletter {
-    background-color: #070707;
-    border-top: 1px solid #3C3C3C;
-    border-bottom: 1px solid #3C3C3C;
-}
-
 
 
 .btns {
@@ -440,23 +434,6 @@ main {
     transform: scale(1.1);
 }
 
-
-.title {
-    font-size: 26px;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-#contact-form .title {
-    justify-content: center;
-    text-align: center;
-}
-
-.fullText p:not(.title) {
-    margin-bottom: 40px;
-}
 
 #middleBG {
     background-image: url("/assets/media/images/middleBG.jpg");
@@ -706,8 +683,12 @@ article a {
     border-radius: 40px;
     border: 1.5px solid #2900FF;
     background-color: #2900FF;
+    cursor: pointer;
+    transition: .5s ease;
 }
-
+.btns-offers:hover{
+    transform: scale(1.1);
+}
 .container-btns{
     width: 100%;
     display: flex;
@@ -1184,7 +1165,6 @@ input:checked + .slider:before {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 100px;
     height: 50px;
     line-height: 60px;
     background-color: transparent;
@@ -1351,10 +1331,157 @@ button {
     justify-content: flex-start;
     align-items: center;
 }
+
+.photo-container{
+    padding: 150px 0px 150px 150px;
+    box-sizing: border-box;
+}
+.patch-photos{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.patch-photos p {
+    opacity: 0;
+    height: inherit;
+    z-index: 10000;
+}
+.patch-photos p:hover {
+    opacity: 1;
+}
+#max{
+    background-image: url('../../media/images/max.jpg');
+}
+#hugo{
+    background-image: url('../../media/images/hugo.jpg');
+}
+#hugo:hover{
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    transition: .5s ease-in-out;
+    opacity: 1;
+}
+#antoine{
+    background-image: url('../../media/images/antoine.jpg');
+}
+#clement{
+    background-image: url('../../media/images/clem.jpg');
+}
+.about-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-us{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70%;
+    width: 35%;
+}
+
+.personal-desciption{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+}
+.personal-desciption p{
+    text-align: center;
+}
+.personal-desciption :nth-child(1){
+    font-family: lato-bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 #third-about{
     background-color: #EFF1FF;
 }
 
 .blue-txt{
     color: #2900FF;
+}
+.contact-form{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_form{
+    height: 650px;
+    width: 1050px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_contact{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 650px;
+}
+.container-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.input_firstname, .input_lastname, .input_email, .input_message{
+    height: 50px;
+    width: 350px;
+    border-radius: 10px;
+    border: none;
+    background-color:#EFF1FF;
+    padding-left: 20px;
+    outline: none;
+    box-sizing: border-box;
+}
+.input_lastname{
+    width: 210px!important;
+}
+.input_email, .input_message{
+    width: 600px;
+}
+.input_message{
+    height: 150px;
+    padding-top: 20px;
+}
+.title-contact{
+    width: 400px;
+    background-color: #2900FF;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-group{
+    display: flex;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-group :nth-child(1){
+    margin-bottom: 25px;
+}
+.title-group :nth-child(2){
+    font-family: lato-bold;
+    font-size: 20px;
+}
+
+.container-input :nth-child(1){
+    margin-bottom: 10px;
 }

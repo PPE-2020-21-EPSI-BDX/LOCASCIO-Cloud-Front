@@ -1,32 +1,28 @@
-var burger = document.querySelector('#burger');
-if (burger) {
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li')
 
-    burger.onclick = function (ev) {
-        var target = ev.currentTarget,
-            nav = document.querySelector('nav');
-        if (target.classList.contains('burger-closed')) {
-            target.classList.remove('burger-closed');
-            nav.classList.remove('display-nav');
-        } else {
-            target.classList.add('burger-closed');
-            nav.classList.add('display-nav');
-        }
-    }
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+
+        navLinks.forEach((link, index) => {
+            if (link.style.animation){
+                link.style.animation = ``
+            } else {
+                link.style.animation = `NavLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+            }
+        });
+
+        burger.classList.toggle('toggle');
+    });
+
+
+
 }
 
-window.onscroll = function() {
-    if (document.documentElement.scrollTop > 10) {
-        document.querySelector("header").style.height = "7vh"
-        document.querySelector(".logo-nav img").style.width = "150px"
-        document.querySelector("#logo").style.width = "100px";
-        document.querySelector("header").classList.add('header-bg');
-    } else {
-        document.querySelector("header").style.height = "10vh"
-        document.querySelector(".logo-nav img").style.width = "200px"
-        document.querySelector("#logo").style.width = "200px";
-        document.querySelector("header").classList.remove('header-bg');
-    }
-};
+
+navSlide();
 
 var carousselArrowLeft = document.getElementById("caroussel-arrow-left");
 var carousselArrowRight = document.getElementById("caroussel-arrow-right");

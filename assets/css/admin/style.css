@@ -338,7 +338,7 @@ label {
     font-weight: 400;
 }
 
-input[type="text"] {
+input[type="text"],input[type="number"],input[type="email"] {
     margin-bottom: 20px;
     padding: 10px 18px;
     border: 1px solid #2b3553;
@@ -358,14 +358,14 @@ input[type="text"] {
     transition: color .3s ease-in-out,border-color .3s ease-in-out,background-color .3s ease-in-out;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus {
     border-color: #e14eca;
     box-shadow: none;
     color: hsla(0,0%,100%,.8);
     outline: 0;
 }
 
-input[type="text"][disabled] {
+input[type="text"][disabled], input[type="number"][disabled], input[type="email"][disabled] {
     background-color: #1d253b;
     color: #344675;
     cursor: not-allowed;

@@ -1,5 +1,4 @@
 <section id="firstpage" class="row wrap">
-    <img class="arrow" src="<?= DOMAIN ?>/assets/media/images/arrow-home.svg">
     <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12">
         <div id="container-home" class="column center">
             <h1>LoCascio Cloud, la solution pour votre ordinateur virtuel</h1>
@@ -7,6 +6,7 @@
                 Vestibulum ante ipsum primis in faucibus orci luctus
                 et ultrices posuere </h3>
         </div>
+        <canvas class="loading" id="loading"></canvas>
     </div>
 </section>
 <section id="secondpage" class="row wrap">

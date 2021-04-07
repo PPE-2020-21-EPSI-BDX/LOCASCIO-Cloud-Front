@@ -72,6 +72,17 @@ section {
 
 
 
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(2px);
+}
+
+
+
 header {
     position: fixed;
     height: 10vh;
@@ -223,10 +234,6 @@ main {
 
 
 #firstpage {
-    background-image: url("../../media/images/background-home.jpg");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
     height: 100vh;
 }
 
@@ -236,10 +243,9 @@ main {
     align-items: center;
 }
 
-
-#container-home{
-    margin-top: 12vh;
-
+#container-home {
+    
+    z-index: 10;
 }
 
 #container-home h1{

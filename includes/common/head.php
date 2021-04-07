@@ -49,4 +49,4 @@
     </nav>
 </header>
 <?php } ?>
-<main>
+<main onload="closeLoading()">

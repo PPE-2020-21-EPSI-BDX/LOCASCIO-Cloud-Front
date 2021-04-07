@@ -43,9 +43,6 @@
 
         </div>
 -->
-        <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 top-container">
-            <div class="xSmall-10 small-10 medium-10 large-10 xLarge-10 line"></div>
-        </div>
         <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 bottom-container">
             <div class="xSmall-10 small-10 medium-10 large-6 xLarge-6 bottom-left">
                 <a href="<?= DOMAIN ?>/">

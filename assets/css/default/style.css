@@ -87,7 +87,8 @@ header {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-
+    z-index: 999;
+}
   
 nav {
     display: flex!important;
@@ -102,8 +103,8 @@ nav {
     z-index: 1000;
 }
 
-.burger{
-    display: flex;!important;
+.burger {
+    display: flex!important;
     position: absolute;
     right: 75px;
     height: 3vh;

@@ -1,7 +1,7 @@
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li')
+    const navLinks = document.querySelectorAll('.nav-links li');
 
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
@@ -15,6 +15,10 @@ const navSlide = () => {
         });
 
         burger.classList.toggle('toggle');
+
+        if(window.scrollY >= (window.innerHeight - 30)) { } else {
+            document.querySelector('nav').classList.toggle('nav-hover')
+        }
     });
 
 
@@ -147,3 +151,11 @@ function draw() {
 
 // Loop the animation
 setInterval(draw, 30);
+
+window.onscroll = () => {
+    if(window.scrollY >= (window.innerHeight - 30)) {
+        document.querySelector('nav').classList.add('nav-hover');
+    } else {
+        document.querySelector('nav').classList.remove('nav-hover')
+    }
+};

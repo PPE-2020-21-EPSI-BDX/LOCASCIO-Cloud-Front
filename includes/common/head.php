@@ -23,7 +23,7 @@
     <nav>
         <div class="logo">
             <a href="<?= DOMAIN ?>/">
-                <img id="logo" src="<?= DOMAIN ?>/assets/media/images/LogoV2.svg" alt="logo">
+                <div id="logo" style="mask-image:url('<?= DOMAIN ?>/assets/media/images/LogoV2.svg');-webkit-mask-image:url('<?= DOMAIN ?>/assets/media/images/LogoV2.svg');"></div>
             </a>
         </div>
         <ul class="nav-links">

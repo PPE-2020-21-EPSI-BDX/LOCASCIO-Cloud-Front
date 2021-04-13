@@ -30,7 +30,7 @@ navSlide();
 
 var carousselArrowLeft = document.getElementById("caroussel-arrow-left");
 var carousselArrowRight = document.getElementById("caroussel-arrow-right");
-var carousselTest = document.querySelector(".test");
+var carousselTest = document.querySelector(".carroussel");
 var nbrOfferCard = document.querySelectorAll(".offercard").length;
 var carousselActualCard = 1;
 

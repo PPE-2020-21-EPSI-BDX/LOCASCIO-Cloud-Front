@@ -75,7 +75,7 @@
 
                 <p class="title">Litiges :</p>
 
-                <p>Les présentes conditions du site www.anthedesign.fr sont régies par les lois françaises et toute contestation ou litiges qui pourraient naître de l’interprétation ou de l’exécution de celles-ci seront de la compétence exclusive des tribunaux dont dépend le siège social de la société. La langue de référence, pour le règlement de contentieux éventuels, est le français.</p>
+                <p>Les présentes conditions du site www.anthedesign.fr sont régies par les lois françaises et toute concontainer-offerstion ou litiges qui pourraient naître de l’interprétation ou de l’exécution de celles-ci seront de la compétence exclusive des tribunaux dont dépend le siège social de la société. La langue de référence, pour le règlement de contentieux éventuels, est le français.</p>
 
                 <p class="title">Données personnelles :</p>
 

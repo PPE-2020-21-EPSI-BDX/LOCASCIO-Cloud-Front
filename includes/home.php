@@ -69,137 +69,183 @@
         </div>
     </div>
     <div class="caroussel xLarge-7 large-7 medium-6 small-12 xSmall-12">
-        <div class="test">
+        <div class="carroussel">
             <div class="offercard">
-                <div class="testa">
+                <div class="container-offers">
                     <p class="title-offers">Bureautique</p>
-                    <p class="price-offers">29,99€ / mois</p>
+                    <div class="btns-catchword">
+                        <a>POLYVALENCE</a>
+                    </div>
                 </div>
-                <div class="txt-offers-left">
-                    <p class="components">Processeur</p>
-                    <p class="components">Mémoire RAM</p>
-                    <p class="components">Carte graphique</p>
-                    <p class="components">Suite Adobe</p>
-                    <p class="components">Suite Office</p>
-                </div>
-                <div class="txt-offers-right">
-                    <p class="properties">Intel Core i3</p>
-                    <p class="properties">8 GB</p>
-                    <p class="properties">GTX 1060</p>
-                    <img class='cross' src="<?= DOMAIN ?>/assets/media/images/close.svg">
-                    <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                <div class="container-advantage">
+                    <div class="subcontain-advantage">
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Simplicité</p>
+                        </div>
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Bon rapport qualité prix</p>
+                        </div>
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Adapté à vos besoins</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>A partir de</p>
+                        <p class="price-offers">29,99€ <span class="blue-txt">/ mois</span></p>
+                    </div>
                 </div>
                 <div class="container-btns">
                     <a href="#" class="read-more-button">
-                        <span class="text">sélectionner</span>
+                        <span class="text">ajouter au panier</span>
                         <span class="arrow-btns"></span>
                     </a>
+                    <a href="<?= DOMAIN ?>/offers" class="see-more">En savoir plus</a>
                 </div>
             </div>
             <div class="offercard">
-                <div class="testa">
+                <div class="container-offers">
                     <p class="title-offers">Productivité</p>
-                    <p class="price-offers">39,99€ / mois</p>
+                    <div class="btns-catchword">
+                        <a>EFFICACITé</a>
+                    </div>
                 </div>
-                <div class="txt-offers-left">
-                    <p class="components">Processeur</p>
-                    <p class="components">Mémoire RAM</p>
-                    <p class="components">Carte graphique</p>
-                    <p class="components">Suite Adobe</p>
-                    <p class="components">Suite Office</p>
-                </div>
-                <div class="txt-offers-right">
-                    <p class="properties">Intel Core i5</p>
-                    <p class="properties">16 GB</p>
-                    <p class="properties">GTX 1660 TI</p>
-                    <img class='cross' src="<?= DOMAIN ?>/assets/media/images/close.svg">
-                    <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                <div class="container-advantage">
+                    <div class="subcontain-advantage">
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Simplicité</p>
+                        </div>
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Bon rapport qualité prix</p>
+                        </div>
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Adapté à vos besoins</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>A partir de</p>
+                        <p class="price-offers">39,99€ <span class="blue-txt">/ mois</span></p>
+                    </div>
                 </div>
                 <div class="container-btns">
-                   <a href="#" class="read-more-button">
-                        <span class="text">sélectionner</span>
+                    <a href="#" class="read-more-button">
+                        <span class="text">ajouter au panier</span>
                         <span class="arrow-btns"></span>
                     </a>
+                    <a href="<?= DOMAIN ?>/offers" class="see-more">En savoir plus</a>
                 </div>
             </div>
             <div class="offercard">
-                <div class="testa">
+                <div class="container-offers">
                     <p class="title-offers">Graphisme</p>
-                    <p class="price-offers">69,99€ / mois</p>
+                    <div class="btns-catchword">
+                        <a>puissance</a>
+                    </div>
                 </div>
-                <div class="txt-offers-left">
-                    <p class="components">Processeur</p>
-                    <p class="components">Mémoire RAM</p>
-                    <p class="components">Carte graphique</p>
-                    <p class="components">Suite Adobe</p>
-                    <p class="components">Suite Office</p>
-                </div>
-                <div class="txt-offers-right">
-                    <p class="properties">Ryzen 7 5000</p>
-                    <p class="properties">32 GB</p>
-                    <p class="properties">RTX 3070</p>
-                    <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
-                    <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                <div class="container-advantage">
+                    <div class="subcontain-advantage">
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Simplicité</p>
+                        </div>
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Bon rapport qualité prix</p>
+                        </div>
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Adapté à vos besoins</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>A partir de</p>
+                        <p class="price-offers">59,99€ <span class="blue-txt">/ mois</span></p>
+                    </div>
                 </div>
                 <div class="container-btns">
-                   <a href="#" class="read-more-button">
-                        <span class="text">sélectionner</span>
+                    <a href="#" class="read-more-button">
+                        <span class="text">ajouter au panier</span>
                         <span class="arrow-btns"></span>
                     </a>
+                    <a href="<?= DOMAIN ?>/offers" class="see-more">En savoir plus</a>
                 </div>
             </div>
             <div class="offercard">
-                <div class="testa">
+                <div class="container-offers">
                     <p class="title-offers">Performance</p>
-                    <p class="price-offers">89,99€ / mois</p>
+                    <div class="btns-catchword">
+                        <a>overkill</a>
+                    </div>
                 </div>
-                <div class="txt-offers-left">
-                    <p class="components">Processeur</p>
-                    <p class="components">Mémoire RAM</p>
-                    <p class="components">Carte graphique</p>
-                    <p class="components">Suite Adobe</p>
-                    <p class="components">Suite Office</p>
-                </div>
-                <div class="txt-offers-right">
-                    <p class="properties">Ryzen 9 5000</p>
-                    <p class="properties">64 GB</p>
-                    <p class="properties">RTX 3080</p>
-                    <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
-                    <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
-                </div>
-                <div class="container-btns">
-                   <a href="#" class="read-more-button">
-                        <span class="text">sélectionner</span>
-                        <span class="arrow-btns"></span>
-                    </a>
-                </div>
-            </div>     
-            <div class="offercard">
-                <div class="testa">
-                    <p class="title-offers">Personnalisé</p>
-                    <p class="price-offers">A partir de 23,99€ / mois</p>
-                </div>
-                <div class="txt-offers-left">
-                    <p class="components">Processeur</p>
-                    <p class="components">Mémoire RAM</p>
-                    <p class="components">Carte graphique</p>
-                    <p class="components">Suite Adobe</p>
-                    <p class="components">Suite Office</p>
-                </div>
-                <div class="txt-offers-right">
-                    <p class="properties">Au choix</p>
-                    <p class="properties">Au choix</p>
-                    <p class="properties">Au choix</p>
-                    <img class='cross' src="<?= DOMAIN ?>/assets/media/images/close.svg">
-                    <img class='cross' src="<?= DOMAIN ?>/assets/media/images/close.svg">
+                <div class="container-advantage">
+                    <div class="subcontain-advantage">
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Simplicité</p>
+                        </div>
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Bon rapport qualité prix</p>
+                        </div>
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Adapté à vos besoins</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>A partir de</p>
+                        <p class="price-offers">79,99€ <span class="blue-txt">/ mois</span></p>
+                    </div>
                 </div>
                 <div class="container-btns">
-                   <a href="#" class="read-more-button">
-                        <span class="text">sélectionner</span>
+                    <a href="#" class="read-more-button">
+                        <span class="text">ajouter au panier</span>
                         <span class="arrow-btns"></span>
                     </a>
+                    <a href="<?= DOMAIN ?>/offers" class="see-more">En savoir plus</a>
                 </div>
             </div>
+            <div class="offercard">
+                <div class="container-offers">
+                    <p class="title-offers">Personnalisée</p>
+                    <div class="btns-catchword">
+                        <a>MODULAIRE</a>
+                    </div>
+                </div>
+                <div class="container-advantage">
+                    <div class="subcontain-advantage">
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Simplicité</p>
+                        </div>
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Bon rapport qualité prix</p>
+                        </div>
+                        <div class="advantage">
+                            <img class='check' src="<?= DOMAIN ?>/assets/media/images/check.svg">
+                            <p>Adapté à vos besoins</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>A partir de</p>
+                        <p class="price-offers">24,99€ <span class="blue-txt">/ mois</span></p>
+                    </div>
+                </div>
+                <div class="container-btns">
+                    <a href="#" class="read-more-button">
+                        <span class="text">ajouter au panier</span>
+                        <span class="arrow-btns"></span>
+                    </a>
+                    <a href="<?= DOMAIN ?>/offers" class="see-more">En savoir plus</a>
+                </div>
+            </div>
+
         </div>
         <div class="caroussel-btn">
             <span id="caroussel-arrow-left" class="caroussel-arrow caroussel-arrow-left"></span>

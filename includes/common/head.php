@@ -33,8 +33,8 @@
             <li class="<?= ($uri == '/a-propos') ? 'active' : '' ?>">
                 <a class="left txt-nav" href="<?= DOMAIN ?>/a-propos">&Agrave; propos</a>
             </li>
-            <li class="<?= ($uri == '/contact') ? 'active' : '' ?>">
-                <a class="left txt-nav" href="<?= DOMAIN ?>/contact">Nos offres</a>
+            <li class="<?= ($uri == '/offers') ? 'active' : '' ?>">
+                <a class="left txt-nav" href="<?= DOMAIN ?>/offers">Nos offres</a>
             </li>
             <li class="<?= ($uri == '/connexion') ? 'active' : '' ?>">
                 <a class="left txt-nav" href="<?= DOMAIN ?>/connexion">Se Connecter</a>

@@ -20,7 +20,7 @@
 <body>
 <?php if (!defined('MAINTENANCE') && !defined('ERROR_404') && !defined('ADMIN')) { ?>
 <header>
-    <nav>
+    <nav <?= ($uri !== '/') ? 'class="nav-hover"' : '' ?>>
         <div class="logo">
             <a href="<?= DOMAIN ?>/">
                 <div id="logo" style="mask-image:url('<?= DOMAIN ?>/assets/media/images/LogoV2.svg');-webkit-mask-image:url('<?= DOMAIN ?>/assets/media/images/LogoV2.svg');"></div>

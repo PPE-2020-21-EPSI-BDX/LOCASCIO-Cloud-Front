@@ -38,6 +38,9 @@ require_once __REALPATH__ . '/includes/tools/functions.php';
  * ================================================================
  */
 
+// isAdmin();
+// logout();
+
 $page = get_page($uri, $segments);
 if(!defined('ADMIN')) {
     require __REALPATH__ . '/includes/common/head.php';

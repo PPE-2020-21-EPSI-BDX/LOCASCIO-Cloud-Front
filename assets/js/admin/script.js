@@ -7,15 +7,25 @@ var elements = stripe.elements();
 
 var style = {
     base: {
-        fontWeight: 400,
-        fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
-        fontSize: '16px',
-        lineHeight: '1.4',
-        color: '#555',
-        backgroundColor: '#fff',
-        '::placeholder': {
-            color: '#888',
-        },
+        marginBottom: '20px',
+        padding: '10px 18px 10px 18px',
+        border: '1px solid #2b3553',
+        borderRadius: '.4285rem',
+        fontSize: '.75rem',
+        fontFamily: 'inherit',
+        display: 'block',
+        width: '100%',
+        fontWeight: '400',
+        lineHeight: '1.428571',
+        backgroundColor: 'transparent',
+        backgroundClip: 'padding-box',
+        boxShadow: 'none',
+        boxSizing: 'border-box',
+        ':focus' : {
+            borderColor: '#e14eca',
+            boxShadow: 'none',
+            outline: '0'
+        }
     },
     invalid: {
         color: '#eb1c26',

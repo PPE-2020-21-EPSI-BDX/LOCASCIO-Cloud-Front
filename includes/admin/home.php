@@ -1,163 +1,132 @@
 <?php
+// if (!isset($_SESSION['Id_Users'])) {
+//    echo "lol";
+// } else {
  
-// Get user ID from current SESSION 
-$userID = isset($_SESSION['loggedInUserID'])?$_SESSION['loggedInUserID']:1; 
- 
-$payment_id = $statusMsg = $api_error = ''; 
-$ordStatus = 'danger'; 
- 
-// Check whether stripe token is not empty 
-if(!empty($_POST['stripeToken'])){ 
-     
-    // Retrieve stripe token and user info from the submitted form data 
-    $token  = $_POST['stripeToken'];
-    $price = $_POST['price']; 
-    $name = $_POST['name']; 
-    $email = $_POST['email']; 
-     
-    // Plan info 
-    $planID = 5;
-    $planName = "Abonnement #1"; 
-    $planPrice = $price; 
-    $planInterval = 'month'; 
-     
-    // Include Stripe PHP library 
-    require_once 'stripe-php-master/init.php'; 
-     
-    // Set API key 
-    \Stripe\Stripe::setApiKey('sk_test_51IccnyHHq6fdZswDsYveqpC1mdSFBZCw8JtfkaNFPNBBHQckFKuuDQM9sixJoT2tmACOEUHxWg3eBygswi2jlWW100tZFp99Os'); 
-     
-    // Add customer to stripe 
-    try {  
-        $customer = \Stripe\Customer::create(array( 
-            'email' => $email, 
-            'source'  => $token 
-        )); 
-    }catch(Exception $e) {  
-        $api_error = $e->getMessage();  
-    } 
-     
-    if(empty($api_error) && $customer){  
-     
-        // Convert price to cents 
-        $priceCents = round($planPrice*100); 
-     
-        // Create a plan 
-        try { 
-            $plan = \Stripe\Plan::create(array( 
-                "product" => [ 
-                    "name" => $planName 
-                ], 
-                "amount" => $priceCents, 
-                "currency" => 'EUR', 
-                "interval" => $planInterval, 
-                "interval_count" => 12
+    // Get user ID from current SESSION 
+    $userID = isset($_SESSION['loggedInUserID'])?$_SESSION['loggedInUserID']:1; 
+    
+    $payment_id = $statusMsg = $api_error = ''; 
+    $ordStatus = 'danger'; 
+    
+    // Check whether stripe token is not empty 
+    if(!empty($_POST['stripeToken'])){ 
+        
+        // Retrieve stripe token and user info from the submitted form data 
+        $token  = $_POST['stripeToken'];
+        $price = $_POST['price']; 
+        $name = $_POST['name']; 
+        $email = $_POST['email']; 
+        
+        // Plan info 
+        $planID = 5;
+        $planName = "Abonnement #1"; 
+        $planPrice = $price; 
+        $planInterval = 'month'; 
+        
+        // Include Stripe PHP library 
+        require_once 'stripe-php-master/init.php'; 
+        
+        // Set API key 
+        \Stripe\Stripe::setApiKey('sk_test_51IccnyHHq6fdZswDsYveqpC1mdSFBZCw8JtfkaNFPNBBHQckFKuuDQM9sixJoT2tmACOEUHxWg3eBygswi2jlWW100tZFp99Os'); 
+        
+        // Add customer to stripe 
+        try {  
+            $customer = \Stripe\Customer::create(array( 
+                'email' => $email, 
+                'source'  => $token 
             )); 
-        }catch(Exception $e) { 
-            $api_error = $e->getMessage(); 
+        }catch(Exception $e) {  
+            $api_error = $e->getMessage();  
         } 
-         
-        if(empty($api_error) && $plan){ 
-            // Creates a new subscription 
+        
+        if(empty($api_error) && $customer){  
+        
+            // Convert price to cents 
+            $priceCents = round($planPrice*100); 
+        
+            // Create a plan 
             try { 
-                $subscription = \Stripe\Subscription::create(array( 
-                    "customer" => $customer->id, 
-                    "items" => array( 
-                        array( 
-                            "plan" => $plan->id, 
-                        ), 
-                    ), 
+                $plan = \Stripe\Plan::create(array( 
+                    "product" => [ 
+                        "name" => $planName 
+                    ], 
+                    "amount" => $priceCents, 
+                    "currency" => 'EUR', 
+                    "interval" => $planInterval, 
+                    "interval_count" => 12
                 )); 
             }catch(Exception $e) { 
                 $api_error = $e->getMessage(); 
             } 
-             
-            if(empty($api_error) && $subscription){ 
-                // Retrieve subscription data 
-                $subsData = $subscription->jsonSerialize(); 
-         
-                // Check whether the subscription activation is successful 
-                if($subsData['status'] == 'active'){ 
-                    // Subscription info 
-                    $subscrID = $subsData['id']; 
-                    $custID = $subsData['customer']; 
-                    $planID = $subsData['plan']['id']; 
-                    $planAmount = ($subsData['plan']['amount']/100); 
-                    $planCurrency = $subsData['plan']['currency']; 
-                    $planinterval = $subsData['plan']['interval']; 
-                    $planIntervalCount = $subsData['plan']['interval_count']; 
-                    $created = date("Y-m-d H:i:s", $subsData['created']); 
-                    $current_period_start = date("Y-m-d H:i:s", $subsData['current_period_start']); 
-                    $current_period_end = date("Y-m-d H:i:s", $subsData['current_period_end']); 
-                    $status = $subsData['status']; 
-                     
-                    // Include database connection file  
-                    // include_once 'dbConnect.php'; 
-         
-                    // // Insert transaction data into the database 
-                    // $sql = "INSERT INTO user_subscriptions(user_id,stripe_subscription_id,stripe_customer_id,stripe_plan_id,plan_amount,plan_amount_currency,plan_interval,plan_interval_count,payer_email,created,plan_period_start,plan_period_end,status) VALUES('".$userID."','".$subscrID."','".$custID."','".$planID."','".$planAmount."','".$planCurrency."','".$planinterval."','".$planIntervalCount."','".$email."','".$created."','".$current_period_start."','".$current_period_end."','".$status."')"; 
-                    // $insert = $db->query($sql);  
-                      
-                    // // Update subscription id in the users table  
-                    // if($insert && !empty($userID)){  
-                    //     $subscription_id = $db->insert_id;  
-                    //     $update = $db->query("UPDATE users SET subscription_id = {$subscription_id} WHERE id = {$userID}");  
-                    // } 
-                     
-                    $ordStatus = 'success'; 
-                    $statusMsg = 'Your Subscription Payment has been Successful!'; 
+            
+            if(empty($api_error) && $plan){ 
+                // Creates a new subscription 
+                try { 
+                    $subscription = \Stripe\Subscription::create(array( 
+                        "customer" => $customer->id, 
+                        "items" => array( 
+                            array( 
+                                "plan" => $plan->id, 
+                            ), 
+                        ), 
+                    )); 
+                }catch(Exception $e) { 
+                    $api_error = $e->getMessage(); 
+                } 
+                
+                if(empty($api_error) && $subscription){ 
+                    // Retrieve subscription data 
+                    $subsData = $subscription->jsonSerialize(); 
+            
+                    // Check whether the subscription activation is successful 
+                    if($subsData['status'] == 'active'){ 
+                        // Subscription info 
+                        $subscrID = $subsData['id']; 
+                        $custID = $subsData['customer']; 
+                        $planID = $subsData['plan']['id']; 
+                        $planAmount = ($subsData['plan']['amount']/100); 
+                        $planCurrency = $subsData['plan']['currency']; 
+                        $planinterval = $subsData['plan']['interval']; 
+                        $planIntervalCount = $subsData['plan']['interval_count']; 
+                        $created = date("Y-m-d H:i:s", $subsData['created']); 
+                        $current_period_start = date("Y-m-d H:i:s", $subsData['current_period_start']); 
+                        $current_period_end = date("Y-m-d H:i:s", $subsData['current_period_end']); 
+                        $status = $subsData['status']; 
+                        
+                        // Include database connection file  
+                        // include_once 'dbConnect.php'; 
+            
+                        // // Insert transaction data into the database 
+                        // $sql = "INSERT INTO user_subscriptions(user_id,stripe_subscription_id,stripe_customer_id,stripe_plan_id,plan_amount,plan_amount_currency,plan_interval,plan_interval_count,payer_email,created,plan_period_start,plan_period_end,status) VALUES('".$userID."','".$subscrID."','".$custID."','".$planID."','".$planAmount."','".$planCurrency."','".$planinterval."','".$planIntervalCount."','".$email."','".$created."','".$current_period_start."','".$current_period_end."','".$status."')"; 
+                        // $insert = $db->query($sql);  
+                        
+                        // // Update subscription id in the users table  
+                        // if($insert && !empty($userID)){  
+                        //     $subscription_id = $db->insert_id;  
+                        //     $update = $db->query("UPDATE users SET subscription_id = {$subscription_id} WHERE id = {$userID}");  
+                        // } 
+                        
+                        $ordStatus = 'success'; 
+                        $statusMsg = 'Your Subscription Payment has been Successful!'; 
+                    }else{ 
+                        $statusMsg = "Subscription activation failed!"; 
+                    } 
                 }else{ 
-                    $statusMsg = "Subscription activation failed!"; 
+                    $statusMsg = "Subscription creation failed! ".$api_error; 
                 } 
             }else{ 
-                $statusMsg = "Subscription creation failed! ".$api_error; 
+                $statusMsg = "Plan creation failed! ".$api_error; 
             } 
-        }else{ 
-            $statusMsg = "Plan creation failed! ".$api_error; 
+        }else{  
+            $statusMsg = "Invalid card details! $api_error";  
         } 
-    }else{  
-        $statusMsg = "Invalid card details! $api_error";  
+    }else{ 
+        $statusMsg = "Error on form submission, please try again."; 
     } 
-}else{ 
-    $statusMsg = "Error on form submission, please try again."; 
-} 
 ?>
 
 <div class="container">
-    <div class="row">
-        <div class="card xLarge-12 large-12 medium-12 small-12 xSmall-12">
-            <div class="card-header">
-                <h5 class="card-title">Voici un cadre</h5>
-            </div>
-            <div class="card-body">
-                <div class="form">
-                    <div class="row">
-                        <div class="xLarge-6 large-6 medium-12 small-12 xSmall-12">
-                            <div class="form-group">
-                                <label>Nom d'utilisateur</label>
-                                <input type="text" placeholder="maki33000" disabled>
-                            </div>
-                        </div>
-                        <div class="xLarge-3 large-3 medium-12 small-12 xSmall-12">
-                            <div class="form-group">
-                                <label>Nom d'utilisateur</label>
-                                <input type="text" placeholder="maki33000">
-                            </div>
-                        </div>
-                        <div class="xLarge-3 large-3 medium-12 small-12 xSmall-12">
-                            <div class="form-group">
-                                <label>Nom d'utilisateur</label>
-                                <input type="text" placeholder="maki33000">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-footer">
-                <button class="btn btn-radius btn-default">Sauvegarder</button>
-            </div>
-        </div>
-    </div>
     <div class="row">
         <div class="card xLarge-8 large-8 medium-12 small-12 xSmall-12">
             <div class="card-header">
@@ -234,3 +203,7 @@ if(!empty($_POST['stripeToken'])){
 
 
 <script src="https://js.stripe.com/v3/"></script>
+
+<?php
+// }
+?>

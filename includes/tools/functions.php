@@ -4,10 +4,15 @@ if (!function_exists('connexion')) {
 
     function connexion()
     {
-        $host = 'localhost';             //myHostAddress
+        $host = 'localhost';            //myHostAddress
         $dbuser = 'root';     //myUserName
-        $dbpw = '';     //myPassword
-        $dbname = 'cours_php';     //myDatabase
+        $dbpw = ''; //myPassword
+        $dbname = 'locascio_cloud';     //myDatabase
+
+        // $host = '127.0.0.1';            //myHostAddress
+        // $dbuser = 'locascio_cloud';     //myUserName
+        // $dbpw = '02bkRoNmRt1FImPOaCVI'; //myPassword
+        // $dbname = 'locascio_cloud';     //myDatabase
 
         $pdoReqArg1 = "mysql:host=". $host .";dbname=". $dbname .";";
         $pdoReqArg2 = $dbuser;
@@ -87,6 +92,12 @@ if (!function_exists('get_page')) {
                     $content = ob_get_clean();
                     break;
 
+                case '/logout':
+                    define('ADMIN', true);
+                    logout();
+                    header('Location: '.DOMAIN.'/');
+                    break;
+
                 default:
                     define('ERROR_404', true);
                     ob_start();
@@ -131,13 +142,39 @@ if (!function_exists('maintenance')) {
     }
 }
 
+if (!function_exists('isAdmin')) {
+
+    function isAdmin()
+    {
+        if (!isset($_SESSION['id']) && isset($_POST['connexion']) && $_POST['connexion'] == 'ok') {
+
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            $db = connexion();
+            $query = "SELECT Id_Users, name, lastname, email FROM users WHERE email = :email AND password = :password";
+            $stt = $db->prepare($query);
+            $stt->bindValue(':email', $email, PDO::PARAM_STR);
+            $stt->bindValue(':password', md5($password), PDO::PARAM_STR);
+            $stt->execute();
+
+            if ($stt->rowCount() > 0) {
+                $user = $stt->fetch(\PDO::FETCH_ASSOC);
+                $_POST['id'] = $user['Id_Users'];
+            } else {
+                $_POST['error'] = "L'adresse email et le mot de passe ne correspondent pas.";
+            }
+        }
+    }
+}
+
 if (!function_exists('logout')) {
 
     function logout()
     {
         if (isset($_POST['logout']) && $_POST['logout'] == 'ok') {
             session_destroy();
-            header('Location: ' . DOMAIN . '/login');
+            header('Location: ' . DOMAIN . '/connexion');
         }
     }
 }

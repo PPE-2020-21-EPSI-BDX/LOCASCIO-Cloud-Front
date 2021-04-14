@@ -2,9 +2,23 @@
     <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12">
         <div id="container-home" class="column center">
             <h1>LoCascio Cloud, la solution pour votre ordinateur virtuel</h1>
-            <h3>Petite description sur le concept.
+            <h3>
+                Petite description sur le concept.
                 Vestibulum ante ipsum primis in faucibus orci luctus
-                et ultrices posuere </h3>
+                et ultrices posuere
+            </h3>
+            <a href="#offers" class="btn_log">
+                <svg width="130" height="62">
+                    <defs>
+                        <linearGradient id="grad1">
+                            <stop offset="0%" stop-color="#2900FF"/>
+                            <stop offset="100%" stop-color="#2900FF"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="5" y="5" rx="10" fill="none" stroke="url(#grad1)" width="120" height="50"></rect>
+                </svg>
+                <span style="background-color:#fff;">Nos offres</span>
+            </a>
         </div>
         <canvas class="loading" id="loading"></canvas>
     </div>
@@ -68,7 +82,7 @@
                 Curae  </h3>
         </div>
     </div>
-    <div class="caroussel xLarge-7 large-7 medium-6 small-12 xSmall-12">
+    <div id="offers" class="caroussel xLarge-7 large-7 medium-6 small-12 xSmall-12">
         <div class="carroussel">
             <div class="offercard">
                 <div class="container-offers">

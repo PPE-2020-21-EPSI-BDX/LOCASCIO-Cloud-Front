@@ -10,7 +10,7 @@ define('__REALPATH__', __DIR__);
  */
 
 //$domain = '/Cours/EPSI%20B1/PHP/02'; // Pour le prof
-$domain = '/PHP/V3'; // Pour le prof
+$domain = '/PPE'; // Pour le prof
 define('DOMAIN', $domain);
 $uri = str_replace($domain, '', $_SERVER['REQUEST_URI']);
 $segments = explode('/', $uri);
@@ -37,6 +37,9 @@ require_once __REALPATH__ . '/includes/tools/functions.php';
  * ====================== Application render ======================
  * ================================================================
  */
+
+// isAdmin();
+// logout();
 
 $page = get_page($uri, $segments);
 if(!defined('ADMIN')) {

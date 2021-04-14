@@ -25,7 +25,7 @@
         <div class="logo-nav"></div>
         <ul>
             <li class="<?= ($uri == '/') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/">Accueil</a>
+                <a class="txt-nav" href="<?= DOMAIN ?>/logout">Déconnexion</a>
             </li>
         </ul>
     </nav>
@@ -34,7 +34,7 @@
 <main>
     <div class="sidebar">
         <div class="sidebar__item_big">
-            <div class="sidebar__item_big_symbol" style="mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');-webkit-mask-image:url('<?= DOMAIN ?>/assets/media/images/dashboard.svg');"></div>
+            <div class="sidebar__item_avatar"><img src="<?= DOMAIN ?>/assets/media/images/94d6cc88-c90a-4433-853c-c54876267747.png" width="35px"></div>
             <div class="sidebar__item_big_name">Maxime BAUDOIN</div>
         </div>
         <div class="sidebar__separator"></div>

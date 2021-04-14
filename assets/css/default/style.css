@@ -123,7 +123,6 @@ nav {
     justify-content: center;
     background-color: transparent;
     color: #fff;
-    box-shadow: 0px 5px 15px rgba(0 ,0 , 0, 0.2);
     position: fixed;
     z-index: 1000;
     transition: .2s background-color ease-in-out;
@@ -132,6 +131,7 @@ nav {
 nav:hover,
 nav.nav-hover {
     background-color: #fff;
+    box-shadow: 0px 5px 15px rgba(0 ,0 , 0, 0.2);
 }
 
 .burger {
@@ -678,6 +678,7 @@ a.left:hover:before {
     min-height: 100vh;
     flex-wrap: wrap;
     background-color: rgba(239, 241, 255, 1);
+    padding-bottom: 30px;
 }
 
 .container-log{
@@ -757,6 +758,20 @@ label{
     font-family: lato-bold;
     color: #2900FF;
     font-size: 14px;
+}
+
+.alert {
+    display: block;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px 0;
+    border-radius: 7px;
+}
+
+.alert.alert-error {
+    border: 1px solid #f5c6cb;
+    background-color: #f8d7da;
+    color: #721c24;
 }
 
 .remember{

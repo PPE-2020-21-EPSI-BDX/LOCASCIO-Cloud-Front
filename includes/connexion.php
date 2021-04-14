@@ -1,24 +1,51 @@
+<?php
+//if (!isset($_SESSION['Id_Users'])) {
 
+    if (isset($_POST['connexion']) && $_POST['connexion'] == 'ok') {
 
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
+        $db = connexion();
+        $query = "SELECT Id_Users, name, lastname, email FROM users WHERE email = :email AND password = :password";
+        $stt = $db->prepare($query);
+        $stt->bindValue(':email', $email, PDO::PARAM_STR);
+        $stt->bindValue(':password', md5($password), PDO::PARAM_STR);
+        $stt->execute();
 
-
-
+        if ($stt->rowCount() > 0) {
+            $user = $stt->fetch(\PDO::FETCH_ASSOC);
+            foreach ($user as $key => $value) {
+                $_SESSION[$key] = $value;
+            }
+            header('Location: ' . DOMAIN . '/admin');
+        } else {
+            $error = "L'adresse email et le mot de passe ne correspondent pas.";
+        }
+    }
+?>
 <section id="login">
+
     <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 container-log">
+    
         <div class="card_log">
+            <?php if(isset($error)) { ?>
+                <div class="alert alert-error">
+                    <?= $error ?>
+                </div>
+            <?php } ?>
             <div class="welcome">
                 <h1>Bienvenue !</h1>
             </div>
-
-            <form class="login" method="post" action="#">
+            <form class="login" method="post" action="<?= DOMAIN ?>/connexion">
+            <input type="hidden" name="connexion" value="ok" />
             <div class="input_log">
                 <label for="email">Identifiant / Adresse Mail</label>
                 <input type="email" class="input" id="email" name="email" placeholder="exemple@email.com" required spellcheck="false" autocomplete="off">
             </div>
             <div class="input_log">
                 <label for="passwd">Mot de passe</label>
-                <input type="password" class="input" id="passwd" name="passwd" placeholder="mot de passe" required spellcheck="false" autocomplete="off">
+                <input type="password" class="input" id="password" name="password" placeholder="mot de passe" required spellcheck="false" autocomplete="off">
             </div>
             <div class="remember">
                 <label class="switch">
@@ -28,7 +55,7 @@
                 <p id="remember-txt">Se souvenir de moi</p>
             </div>
             <div class="connexion-container">
-                <button href="#" class="btn_log">
+                <button type="submit" class="btn_log">
                     <svg width="130" height="62">
                         <defs>
                             <linearGradient id="grad1">
@@ -105,3 +132,10 @@
     </div>
 
 </section>
+
+<?php
+// } else {
+
+// header('Location: ' . DOMAIN . '/admin');
+// }
+?>

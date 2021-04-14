@@ -4,15 +4,15 @@ if (!function_exists('connexion')) {
 
     function connexion()
     {
-        $host = 'localhost';            //myHostAddress
-        $dbuser = 'root';     //myUserName
-        $dbpw = ''; //myPassword
-        $dbname = 'locascio_cloud';     //myDatabase
+        //$host = 'localhost';            //myHostAddress
+        //$dbuser = 'root';     //myUserName
+        //$dbpw = ''; //myPassword
+        //$dbname = 'locascio_cloud';     //myDatabase
 
-        // $host = '127.0.0.1';            //myHostAddress
-        // $dbuser = 'locascio_cloud';     //myUserName
-        // $dbpw = '02bkRoNmRt1FImPOaCVI'; //myPassword
-        // $dbname = 'locascio_cloud';     //myDatabase
+        $host = '127.0.0.1';            //myHostAddress
+        $dbuser = 'locascio_cloud';     //myUserName
+        $dbpw = '02bkRoNmRt1FImPOaCVI'; //myPassword
+        $dbname = 'locascio_cloud';     //myDatabase
 
         $pdoReqArg1 = "mysql:host=". $host .";dbname=". $dbname .";";
         $pdoReqArg2 = $dbuser;

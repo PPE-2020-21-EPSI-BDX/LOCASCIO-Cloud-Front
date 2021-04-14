@@ -131,7 +131,7 @@ nav {
 
 nav:hover,
 nav.nav-hover {
-    background-color: #fff;
+    background-color: #EFF1FF;
 }
 
 .burger {
@@ -149,7 +149,7 @@ nav.nav-hover {
 
 .nav-links{
     height: 93vh;
-    background-color: #fff;
+    background-color: #EFF1FF;
     position: absolute;
     top: 6vh;
     right: 0px;

@@ -10,7 +10,7 @@ define('__REALPATH__', __DIR__);
  */
 
 //$domain = '/Cours/EPSI%20B1/PHP/02'; // Pour le prof
-$domain = '/PHP/V3'; // Pour le prof
+$domain = ''; // Pour le prof
 define('DOMAIN', $domain);
 $uri = str_replace($domain, '', $_SERVER['REQUEST_URI']);
 $segments = explode('/', $uri);

@@ -55,6 +55,9 @@
     .bottom-left a{
         margin-right: 15px!important;
     }
+    .phone-img{
+        display: flex!important;
+    }
 
 }
 
@@ -84,6 +87,9 @@
     .bottom-left a{
         margin-right: 15px!important;
     }
+    .phone-img{
+        display: flex!important;
+    }
 }
 
 @media only screen and (max-width: 259px) {
@@ -103,6 +109,9 @@
 
     .nav-links{
         width: 40%!important;
+    }
+    .phone-img{
+        display: flex!important;
     }
 
 }

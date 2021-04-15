@@ -26,7 +26,7 @@
 ?>
 <section id="login">
 
-    <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 container-log">
+    <div class="xLarge-6 large-6 medium-12 small-12 xSmall-12 container-log">
     
         <div class="card_log">
             <?php if(isset($error)) { ?>
@@ -78,7 +78,7 @@
         </div>
 
     </div>
-    <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 container-regi">
+    <div class="xLarge-6 large-6 medium-12 small-12 xSmall-12 container-regi">
         <div class="card_regi">
             <div class="regi">
                 <h1>Je n'ai pas encore de compte</h1>
@@ -132,10 +132,3 @@
     </div>
 
 </section>
-
-<?php
-// } else {
-
-// header('Location: ' . DOMAIN . '/admin');
-// }
-?>

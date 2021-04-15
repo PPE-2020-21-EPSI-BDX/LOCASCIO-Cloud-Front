@@ -7,18 +7,7 @@
                 Vestibulum ante ipsum primis in faucibus orci luctus
                 et ultrices posuere
             </h3>
-            <a href="#offers" class="btn_log">
-                <svg width="130" height="62">
-                    <defs>
-                        <linearGradient id="grad1">
-                            <stop offset="0%" stop-color="#2900FF"/>
-                            <stop offset="100%" stop-color="#2900FF"/>
-                        </linearGradient>
-                    </defs>
-                    <rect x="5" y="5" rx="10" fill="none" stroke="url(#grad1)" width="120" height="50"></rect>
-                </svg>
-                <span style="background-color:#fff;">Nos offres</span>
-            </a>
+            <a href="#offers" class="btns-offers">Nos offres</a>
         </div>
         <canvas class="loading" id="loading"></canvas>
     </div>

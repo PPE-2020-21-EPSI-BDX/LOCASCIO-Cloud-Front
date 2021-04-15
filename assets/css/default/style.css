@@ -1249,7 +1249,195 @@ input:checked + .slider:before {
 
 /* ---------------------------------------------------------- */
 
+/* -------------------------FIRST OFFERS SECTION--------------------------------- */
+#first-offers{
+    /*min-height: 100vh;*/
+}
+.title-offers-details{
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 10vh;
+    margin-top: 7vh;
+    background-color: #0A0024;
+    color: #FFFFFF;
+}
+.title-offers-details :nth-child(1){
+    font-size: 35px;
+    font-family: lato-bold;
+    line-height: 45px;
+}
+.title-offers-details :nth-child(2){
+    font-size: 20px;
+    font-family: 'lato-regular', Tahoma, Geneva, sans-serif;
+}
+.phone-img{
+    display: none;
+    background-color: #0A0024;
+}
+.container-details{
+    background-color: #0A0024;
+}
+.padding-details{
+    padding: 40px;
+    box-sizing: border-box;
+    min-height: 70vh;
+}
+.card-details{
+    min-width: 430px;
+    height: 510px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 40px 60px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.60);
+    border-radius: 15px;
+    transition: all .3s ease-out;
 
+}
+.card-details:hover {
+    transform: perspective(4500px) rotateX(-5deg) translate(0, -20px);
+
+}
+.container-col-details{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-details, .left-details{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.right-details p, .left-details p{
+    font-family: lato-bold;
+}
+.title-details{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.price-details{
+    font-family: lato-bold;
+    font-size: 28px;
+}
+
+.btns-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btns-sub{
+    height: 45px;
+    width: 145px;
+    color: #2900FF;
+    font-family: lato-regular;
+    font-weight: bolder!important;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    border: 1.5px solid #2900FF;
+    transition: .5s ease;
+}
+.btns-cart{
+    height: 45px;
+    width: 145px;
+    color: #ffffff;
+    font-family: lato-regular;
+    font-weight: bolder!important;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    border: 1.5px solid #2900FF;
+    background-color: #2900FF;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.btns-cart:hover, .btns-sub:hover{
+    transform: scale(1.05);
+}
+.btns-cart:active, .btns-sub:active{
+    transform: scale(0.95);
+}
+
+
+.switch-software {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch-software input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-software {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #de3232;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: none;
+    outline: none;
+}
+
+.slider-software:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider-software {
+    background-color: #3db978;
+}
+
+input:focus + .slider-software {
+    box-shadow: 0 0 1px #EFF1FF;
+}
+
+input:checked + .slider-software:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+.slider-software.round {
+    border-radius: 10px;
+}
+
+.slider-software.round:before {
+    border-radius: 50%;
+}
 
 /* ----------------------------FOOTER------------------------------ */
 .footer{

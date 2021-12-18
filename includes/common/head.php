@@ -20,36 +20,32 @@
 <body>
 <?php if (!defined('MAINTENANCE') && !defined('ERROR_404') && !defined('ADMIN')) { ?>
 <header>
-    <div id="burger-container">
-        <img id="logo" src="<?= DOMAIN ?>/assets/media/images/logo_Locascio_Cloud.png" alt="logo">
-        <div id="burger">
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
+    <nav <?= ($uri !== '/') ? 'class="nav-hover"' : '' ?>>
+        <div class="logo">
+            <a href="<?= DOMAIN ?>/">
+                <div id="logo" style="mask-image:url('<?= DOMAIN ?>/assets/media/images/LogoV2.svg');-webkit-mask-image:url('<?= DOMAIN ?>/assets/media/images/LogoV2.svg');"></div>
+            </a>
         </div>
-    </div>
-    <nav class="stroke">
-        <div class="logo-nav">
-            <a href="<?= DOMAIN ?>/"><img src="<?= DOMAIN ?>/assets/media/images/logo_Locascio_Cloud.png" alt="logo"></a>
-        </div>
-        <ul>
+        <ul class="nav-links">
             <li class="<?= ($uri == '/') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/">Accueil</a>
+                <a class="left txt-nav" href="<?= DOMAIN ?>/">Accueil</a>
             </li>
             <li class="<?= ($uri == '/a-propos') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/a-propos">&Agrave; propos</a>
+                <a class="left txt-nav" href="<?= DOMAIN ?>/a-propos">&Agrave; propos</a>
             </li>
-            <li class="<?= ($segments[1] == 'blog') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/blog">Blog</a>
-            </li>
-            <li class="<?= ($uri == '/contact') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/contact">Contact</a>
+            <li class="<?= ($uri == '/offers') ? 'active' : '' ?>">
+                <a class="left txt-nav" href="<?= DOMAIN ?>/offers">Nos offres</a>
             </li>
             <li class="<?= ($uri == '/connexion') ? 'active' : '' ?>">
-                <a class="txt-nav" href="<?= DOMAIN ?>/connexion">Se Connecter</a>
+                <a class="left txt-nav" href="<?= DOMAIN ?>/connexion">Se Connecter</a>
             </li>
         </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
     </nav>
 </header>
 <?php } ?>
-<main>
+<main onload="closeLoading()">

@@ -500,7 +500,7 @@ a.left:hover:before {
     display: flex;
     flex-wrap: wrap;
     margin: 15px;
-    background-color: #0A0024;
+    background: linear-gradient(135deg, #2a1e4a, #0A0024);
     color: white;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
     border-radius: 15px;

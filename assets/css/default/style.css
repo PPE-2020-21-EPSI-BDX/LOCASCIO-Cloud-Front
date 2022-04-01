@@ -311,6 +311,10 @@ a.left:hover:before {
     align-items: center;
 }
 
+#firstpage > div {
+    background-color: #000;
+}
+
 #container-home {
     
     z-index: 10;

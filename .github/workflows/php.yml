@@ -30,7 +30,7 @@ jobs:
       run: /usr/local/bin/composer install --prefer-dist --no-progress --no-suggest
       
     - name: Setup MySql Credentials in config.php
-      run: echo "<?php define('DOMAIN', '');" > config.php && echo "define('DB_HOST', '127.0.0.1'); " >> config.php && echo "define('DB_NAME', '${{ secrets.DATABASE_NAME }}');" >> config.php && echo "define('DB_USERNAME', '${{ secrets.DATABASE_USER }}');" >> config.php && echo "define('DB_PASSWORD', '${{ secrets.DATABASE_PASSWD }}');" >> config.php
+      run: echo "<?php define('DOMAIN', '');" > config.php && echo "define('DB_HOST', 'localhost'); " >> config.php && echo "define('DB_NAME', '${{ secrets.DATABASE_NAME }}');" >> config.php && echo "define('DB_USERNAME', '${{ secrets.DATABASE_USER }}');" >> config.php && echo "define('DB_PASSWORD', '${{ secrets.DATABASE_PASSWD }}');" >> config.php
 
 #     Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
 #     Docs: https://getcomposer.org/doc/articles/scripts.md

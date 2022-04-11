@@ -462,5 +462,5 @@ CREATE TABLE systeme_configuration(
    id_configuration INT,
    PRIMARY KEY(id_systeme, id_configuration),
    FOREIGN KEY(id_systeme) REFERENCES systeme(id),
-   FOREIGN KEY(id_configuration) REFERENCES configuration(id_configuration)
+   FOREIGN KEY(id_configuration) REFERENCES configuration(id)
 );

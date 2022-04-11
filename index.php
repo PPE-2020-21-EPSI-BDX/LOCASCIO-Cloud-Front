@@ -10,8 +10,7 @@ require_once('./config.php');
  * ================================================================
  */
 
-define('DOMAIN', $domain);
-$uri = str_replace($domain, '', $_SERVER['REQUEST_URI']);
+$uri = str_replace(DOMAIN, '', $_SERVER['REQUEST_URI']);
 $segments = explode('/', $uri);
 
 /*

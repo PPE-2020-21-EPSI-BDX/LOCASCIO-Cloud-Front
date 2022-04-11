@@ -9,7 +9,7 @@
                 </a>
                 <a href="#">CGU</a>
                 <a href="#">RGPD</a>
-                <a href="#">Mentions légales</a>
+                <a href="/mentions-legales">Mentions légales</a>
             </div>
             <div class="xSmall-10 small-10 medium-10 large-4 xLarge-4 bottom-right">
                 <div class="socials-footer">
@@ -18,7 +18,7 @@
                     <a class="circle-icon twitter" href="#"></a>
                 </div>
                 <div class="copyright-footer">
-                    <p>Copyright © 2021 PPE EPSI</p>
+                    <p>Copyright © 2020 - <?= date("Y"); ?> PPE EPSI</p>
                 </div>
             </div>
         </div>

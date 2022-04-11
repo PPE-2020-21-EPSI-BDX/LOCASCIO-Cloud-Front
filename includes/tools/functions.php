@@ -137,17 +137,17 @@ if (!function_exists('maintenance')) {
     }
 }
 
-if (!function_exists('isAdmin')) {
+if (!function_exists('login')) {
 
-    function isAdmin()
+    function login()
     {
-        if (!isset($_SESSION['id']) && isset($_POST['connexion']) && $_POST['connexion'] == 'ok') {
+        if (!isset($_SESSION['id']) && isset($_POST['login']) && $_POST['login'] == 'ok') {
 
             $email = $_POST['email'];
             $password = $_POST['password'];
 
             $db = connexion();
-            $query = "SELECT Id_Users, name, lastname, email FROM users WHERE email = :email AND password = :password";
+            $query = "SELECT id, name, lastname, email FROM users WHERE email = :email AND password = :password";
             $stt = $db->prepare($query);
             $stt->bindValue(':email', $email, PDO::PARAM_STR);
             $stt->bindValue(':password', md5($password), PDO::PARAM_STR);
@@ -155,9 +155,13 @@ if (!function_exists('isAdmin')) {
 
             if ($stt->rowCount() > 0) {
                 $user = $stt->fetch(\PDO::FETCH_ASSOC);
-                $_POST['id'] = $user['Id_Users'];
+                $_POST['id'] = $user['id'];
+
+                return $user;
             } else {
                 $_POST['error'] = "L'adresse email et le mot de passe ne correspondent pas.";
+
+                return false;
             }
         }
     }
@@ -167,9 +171,7 @@ if (!function_exists('logout')) {
 
     function logout()
     {
-        if (isset($_POST['logout']) && $_POST['logout'] == 'ok') {
-            session_destroy();
-            header('Location: ' . DOMAIN . '/connexion');
-        }
+        session_destroy();
+        header('Location: ' . DOMAIN . '/connexion');
     }
 }

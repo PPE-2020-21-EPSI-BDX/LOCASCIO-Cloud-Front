@@ -102,11 +102,10 @@ if (!function_exists('get_page')) {
                     break;
             }
 
-        } else {
-
+            return $content;
         }
 
-        return $content;
+
 
     }
 }

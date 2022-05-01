@@ -1,5 +1,5 @@
 <?php
-define('DOMAIN', 'LOCASCIO-Cloud-Front');
+define('DOMAIN', '');
 define('DB_HOST', '');
 define('DB_NAME', '');
 define('DB_USERNAME', '');
